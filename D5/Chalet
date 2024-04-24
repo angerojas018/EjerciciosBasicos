@@ -1,0 +1,72 @@
+package E6;
+//Crear la clase Chalet. Atributos privados String calle, int numParcela, double precio, int superficie, boolean
+//conPiscina. Crear constructores por defecto como se desee. Crear getters y setters, que cumplan estas
+//validaciones: numParcela ha de estar entre 1-10, precio no puede ser negativo, superficie no puede ser
+//negativo ni mayor de 2000. Probar en una clase con un método main.
+
+public class Chalet {
+    
+    private String calle;
+    private int numParcela;
+    private double precio;
+    private int superficie;
+    private boolean conPiscina;
+    
+//Coonstructores
+    public Chalet(String calle, int numParcela, double precio, int superficie, boolean conPsicina) {
+        this.calle = calle;
+        this.numParcela = numParcela;
+        this.precio = precio;
+        this.superficie = superficie;
+        this.conPiscina = conPsicina;
+    }
+    public Chalet(){
+        System.out.println("Se creo el objeto" + this);}
+    
+    public void mostrarDatos(){
+        System.out.println(calle + " " + numParcela + " " + precio + " " + superficie + " " + conPiscina + " ");   }
+
+    public String getCalle() {
+        return calle;
+    }
+    public void setCalle(String calle) {
+        this.calle = calle;
+    }
+    public int getNumParcela() {
+        return numParcela;
+    }
+    public void setNumParcela(int numParcela) {
+        if (numParcela > 1 && numParcela <10){
+         this.numParcela = numParcela;}
+        
+        else 
+            System.out.println("No se puede");
+       
+    }
+    public double getPrecio() {
+        return precio;
+    }
+    public void setPrecio(double precio) {
+        if (precio > 0){
+        this.precio = precio;}
+        
+         else 
+            System.out.println("No se puede");
+    }
+    public int getSuperficie() {
+        return superficie;
+    }
+    public void setSuperficie(int superficie) {
+        if (superficie < 2000){
+        this.superficie = superficie;}
+        else 
+            System.out.println("No se puede");
+        
+    }
+    public boolean isConPiscina() {
+        return conPiscina;
+    }
+    public void setConPiscina(boolean conPiscina) {
+        this.conPiscina = conPiscina;
+    }
+}
