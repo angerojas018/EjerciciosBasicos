@@ -1,0 +1,37 @@
+package C4;
+//Crear la clase Vivienda. Atributos públicos String calle, int numero, double precio, int superficie, boolean
+//conGarage. Crear al menos dos constructores y ademas uno por defecto. Hacer programa Principal, con
+//un método main donde se creen objetos de la clase con todos los constructores, y consultar sus atributos por consola
+public class Vivienda {
+    String Calle;
+    int Numero;
+    double Precio;
+    int Superficie;
+    boolean ConGaraje;
+    
+    //Constructor 1
+
+    public Vivienda(String Calle) {
+        this.Calle = Calle;
+    }
+    //Constrcutor 2
+
+    public Vivienda(int Numero) {
+        this.Numero = Numero;
+    }
+    //Constructor por defecto
+    public Vivienda (double Precio, int Superficie,boolean ConGaraje){
+        this.Precio = Precio;
+        this.Superficie = Superficie;
+        this.ConGaraje = ConGaraje;
+    }
+    public Vivienda(){
+        System.out.println("Se creo el objeto" + this);
+    }
+    
+    public void mostrarDatos(){
+        
+        System.out.println(Calle + " " + Numero + " " + Precio + " " + Superficie + " " + ConGaraje + " " );
+        
+    }
+}
